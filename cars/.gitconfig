@@ -1,0 +1,99 @@
+[user]
+	email = jwharrow@gmail.com
+	name = Joe Harrow
+
+[core]
+  # pager = diff-so-fancy | less --tabs=4 -RFX
+  editor = vim
+  autocrlf = input
+	pager = delta --dark
+	excludesfile = /Users/jharrow/.gitignore
+
+# These are custom color options for the console
+[color]
+  status = auto
+  diff = auto
+	ui = true
+
+[color "status"]
+  untracked = cyan
+  changed = green
+  added = yellow
+
+# Aliases are command shortcuts
+[alias]
+  co = checkout
+  st = status
+
+  prom = pull --rebase origin main
+  f = push --force-with-lease
+  fnv = push --force-with-lease --no-verify
+  oops = commit -a --amend --no-edit
+
+  # lg is now a shortcut for a pretty log with short commit messages
+  # See the log manpage: https://www.kernel.org/pub/software/scm/git/docs/git-log.html
+  # for explanations of what these options do
+  lg = log \
+    --graph \
+    --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' \
+    --abbrev-commit \
+    --date=relative
+  # graphical representation of log (from pavan)
+  graph = log --oneline --decorate --graph --all
+
+  # Shorthand for commit, also enforces diff display in editor before commit
+  ci = commit --verbose
+
+  # Shorthand for a less noisy status
+  s = commit --dry-run --short
+
+  # Diff to origin/main, files only
+  d = diff --name-only origin/main HEAD
+
+  # More sensible names for adding and removing files from the readme
+  stage = add
+  unstage = reset HEAD
+
+  # Track upstream to current
+  track = "!git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`"
+
+  # Unstage everything from last commit
+  gres = !git reset --soft HEAD~1 && git reset
+
+  # Fetch and checkout branch
+  review = "!git fetch origin $1 && git checkout $1 #"
+
+  # Edit the last commit
+  amend= commit --verbose --amend
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 227
+	frag = magenta bold
+	commit = 227 bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[pager]
+	branch = false
+[fetch]
+	prune = true
+# [commit]
+# 	template = ~/.gitmessage
+[push]
+  default = current
+[pull]
+	default = current
+
+[rerere]
+  enabled = false
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+

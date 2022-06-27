@@ -1,0 +1,5 @@
+select case when (SELECT current_database())='cars_platform' then 'off' else 'on' end as auto \gset
+\set AUTOCOMMIT on
+\echo Autocommit is :AUTOCOMMIT
+
+\timing
