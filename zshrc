@@ -73,6 +73,11 @@ alias iexs="iex -S mix"
 alias iexps="iex -S mix phx.server"
 
 # ---------------------------------------------------------------------------
+# Dotfiles maintenance
+# ---------------------------------------------------------------------------
+dotsync() { (cd ~/dotfiles && git add -A && git commit -m "${1:-update dotfiles}" && git push) }
+
+# ---------------------------------------------------------------------------
 # 1Password CLI
 # ---------------------------------------------------------------------------
 [ -f "$HOME/.config/op/plugins.sh" ] && source "$HOME/.config/op/plugins.sh"

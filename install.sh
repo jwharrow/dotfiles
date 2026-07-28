@@ -30,4 +30,5 @@ link iex.exs             "$HOME/.iex.exs"
 
 link zed/settings.json   "$HOME/.config/zed/settings.json"
 link zed/keymap.json     "$HOME/.config/zed/keymap.json"
-link zed/skills          "$HOME/.agents/skills"
+
+# Agent skills live in a separate repo — see github.com/jwharrow/agent_skills
