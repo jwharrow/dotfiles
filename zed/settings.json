@@ -1,0 +1,71 @@
+{
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
+  "vim_mode": true,
+  "relative_line_numbers": true,
+  "cursor_blink": false,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "One Dark"
+  },
+  "ui_font_size": 15,
+  "buffer_font_size": 14,
+  "tab_size": 2,
+  "format_on_save": "on",
+  "soft_wrap": "editor_width",
+  "show_wrap_guides": true,
+  "wrap_guides": [80, 100],
+  "preferred_line_length": 100,
+
+  "project_panel": { "dock": "left" },
+  "outline_panel": { "dock": "left" },
+  "git_panel": { "dock": "left" },
+
+  "agent": {
+    "dock": "right",
+    "play_sound_when_agent_done": "always"
+  },
+
+  "context_servers": {
+    "tidewave-mcp": {
+      "enabled": true,
+      "url": "http://localhost:4000/tidewave/mcp"
+    }
+  },
+
+  "languages": {
+    "Elixir": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "mix",
+          "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
+        }
+      }
+    },
+    "HEEx": {
+      "format_on_save": "on",
+      "language_servers": ["elixir-ls", "tailwindcss-language-server", "emmet-language-server"]
+    }
+  },
+
+  "lsp": {
+    "elixir-ls": {
+      "settings": {
+        "dialyzerEnabled": true
+      }
+    },
+    "tailwindcss-language-server": {
+      "settings": {
+        "includeLanguages": {
+          "elixir": "html",
+          "heex": "html"
+        }
+      }
+    }
+  }
+}
