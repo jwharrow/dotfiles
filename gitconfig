@@ -1,6 +1,7 @@
 [user]
 	email = 13125700+jwharrow@users.noreply.github.com 
 	name = Joe Harrow
+	signingkey = /Users/Joseph.Harrow/.ssh/id_ed25519_github.pub
 
 [init]
 	defaultBranch = main
@@ -51,3 +52,11 @@
 	track = "!git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`"
 	gres = "!git reset --soft HEAD~1 && git reset"
 	review = "!git fetch origin $1 && git checkout $1 #"
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
+[gpg "ssh"]
+	allowedSignersFile = /Users/Joseph.Harrow/.ssh/allowed_signers

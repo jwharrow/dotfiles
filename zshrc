@@ -58,7 +58,6 @@ alias gs="git status"
 alias gp="git pull"
 alias gco="git checkout"
 alias glg="git lg"
-alias gh='open $(git config remote.origin.url | sed "s/git@\(.*\):\(.*\).git/https:\/\/\1\/\2/")/tree/$(git symbolic-ref --quiet --short HEAD)'
 alias gg='open $(git config remote.origin.url | sed "s/git@\(.*\):\(.*\).git/https:\/\/\1\/\2/")/tree/$(git symbolic-ref --quiet --short HEAD)'
 
 # ---------------------------------------------------------------------------
