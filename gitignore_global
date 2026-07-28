@@ -1,0 +1,30 @@
+# --- Elixir / Erlang ---
+/_build/
+/cover/
+/deps/
+/doc/
+/.fetch
+erl_crash.dump
+*.ez
+*.beam
+/config/*.secret.exs
+.elixir_ls/
+.lexical/
+
+# --- Phoenix ---
+/assets/node_modules/
+/priv/static/
+
+# --- Editors ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# --- Env / secrets ---
+.env
+.env.local
+
+# --- Personal ---
+scratch/

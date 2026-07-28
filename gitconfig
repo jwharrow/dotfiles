@@ -1,0 +1,53 @@
+[user]
+	email = 13125700+jwharrow@users.noreply.github.com 
+	name = Joe Harrow
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = false
+
+[push]
+	autoSetupRemote = true
+
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = vim
+
+[color]
+	status = auto
+	diff = auto
+	ui = true
+
+[color "status"]
+	untracked = cyan
+	changed = green
+	added = yellow
+
+[color "diff"]
+	meta = 227
+	frag = magenta bold
+	commit = 227 bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+
+[alias]
+	co = checkout
+	s = status --short --branch
+	st = status
+	ci = commit --verbose
+	stage = add
+	unstage = reset HEAD --
+	amend = commit --verbose --amend
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	graph = log --oneline --decorate --graph --all
+	d = diff --name-only origin/main HEAD
+	prom = pull --rebase origin main
+	f = push --force-with-lease
+	fnv = push --force-with-lease --no-verify
+	oops = commit -a --amend --no-edit
+	track = "!git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`"
+	gres = "!git reset --soft HEAD~1 && git reset"
+	review = "!git fetch origin $1 && git checkout $1 #"
