@@ -76,6 +76,7 @@ alias iexps="iex -S mix phx.server"
 # Dotfiles maintenance
 # ---------------------------------------------------------------------------
 dotsync() { (cd ~/dotfiles && git add -A && git commit -m "${1:-update dotfiles}" && git push) }
+skillsync() { (cd ~/code/agent_skills && git add -A && git commit -m "${1:-update skills}" && git push) }
 
 # ---------------------------------------------------------------------------
 # 1Password CLI
