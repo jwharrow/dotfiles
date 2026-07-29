@@ -88,6 +88,11 @@ skillsync() { (cd ~/code/agent_skills && git add -A && git commit -m "${1:-updat
 # ---------------------------------------------------------------------------
 [ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
 
+# ---------------------------------------------------------------------------
+# Stord secrets (Keychain-backed, not tracked in dotfiles repo)
+# ---------------------------------------------------------------------------
+[ -f "$HOME/.stord_secrets" ] && source "$HOME/.stord_secrets"
+
 # append completions to fpath
 fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
 # initialise completions with ZSH's compinit
