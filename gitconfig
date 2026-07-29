@@ -60,3 +60,5 @@
 	gpgsign = true
 [gpg "ssh"]
 	allowedSignersFile = /Users/Joseph.Harrow/.ssh/allowed_signers
+[include]
+        path = ~/.gitconfig.local
