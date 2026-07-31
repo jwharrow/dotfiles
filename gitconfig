@@ -62,3 +62,5 @@
 	allowedSignersFile = /Users/Joseph.Harrow/.ssh/allowed_signers
 [include]
         path = ~/.gitconfig.local
+[url "git@github.com:stordco/"]
+	insteadOf = https://github.com/stordco/

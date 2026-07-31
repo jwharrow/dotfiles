@@ -28,3 +28,5 @@ erl_crash.dump
 
 # --- Personal ---
 scratch/
+
+**/.claude/settings.local.json

@@ -1,6 +1,9 @@
 {
   "agent_servers": {
     "claude-acp": {
+      "default_config_options": {
+        "model": "opus[1m]"
+      },
       "type": "registry",
     },
   },
@@ -31,8 +34,13 @@
   "git_panel": { "dock": "left" },
 
   "agent": {
+    "auto_compact": {
+      "threshold": "90%"
+    },
+    "show_turn_stats": true,
+    "message_editor_min_lines": 6,
     "dock": "right",
-    "play_sound_when_agent_done": "always",
+    "play_sound_when_agent_done": "never",
   },
 
   "context_servers": {

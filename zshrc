@@ -99,6 +99,12 @@ fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
 autoload -Uz compinit && compinit
 
 # ---------------------------------------------------------------------------
+# Stord things
+# ---------------------------------------------------------------------------
+alias s=stordcli
+
+# ---------------------------------------------------------------------------
 # PATH additions
 # ---------------------------------------------------------------------------
 export PATH="$HOME/.local/bin:$PATH"
+export PATH=/opt/homebrew/bin:$PATH
